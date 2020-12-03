@@ -1,7 +1,7 @@
 <template>
   <div>
 		<transition-group class="posts" id="posts" name="flip-list">
-			<div v-for="(p, index) in searchedPosts" class="post" :key="p.slug">
+			<div v-for="p in searchedPosts" class="post" :key="p.slug">
         <NuxtLink :to="p.slug" class="post_body" :style="{ 'transform': getTranslation(p), 'background-color': getColor(p) }">
           <a :href="p.link">
             <h3 class="post_title">{{ p.title }}</h3>
