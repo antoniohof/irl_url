@@ -11,7 +11,7 @@
 <script>
 export default {
   mounted () {
-    console.log('mounted app')
+    console.log('mounted app 2')
   },
   data () {
     return {
