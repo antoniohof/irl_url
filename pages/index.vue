@@ -44,7 +44,7 @@ export default {
   components: {
   },
   async asyncData({ $content }) {
-    const posts = await $content("blog").fetch()
+    const posts = await $content("posts").fetch()
 
     return {
       posts
