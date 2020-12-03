@@ -1,6 +1,6 @@
 <template>
   <div>
-		<transition-group class="posts" id="posts" name="flip-list">
+		<transition-group v-if="posts.length > 0" class="posts" id="posts" name="flip-list">
 			<div v-for="p in searchedPosts" class="post" :key="p.slug">
         <NuxtLink :to="p.slug" class="post_body" :style="{ 'transform': getTranslation(p), 'background-color': getColor(p) }">
           <a :href="p.link">
@@ -13,6 +13,9 @@
 			  </NuxtLink>
 			</div>
 		</transition-group>
+    <div v-else>
+      No Posts Found
+    </div>
   </div>
 </template>
 
